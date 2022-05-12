@@ -32,6 +32,7 @@ public class Main {
                     9. Write object
                     0. EXIT""");
             try {
+                System.out.print("Choose your option:");
                 option = ns.nextInt();
                 switch (option) {
                     case 1 -> readObject();
@@ -53,9 +54,9 @@ public class Main {
         ns.close();// закрытие потока
     }
 
-    private static int readInt(Scanner ns) {
+    private static int readInt(Scanner ts) {
         while (true) {
-            String line = ns.nextLine();
+            String line = ts.nextLine();
             try {
                 return Integer.parseInt(line);
             } catch (NumberFormatException e) {
@@ -65,22 +66,22 @@ public class Main {
     }
 
     private static void addRoute(Scanner ns) throws ScannerException {
-        System.out.println("Choose route type:\n1. Bus\n2. Tram\n3. Trolleybus");
+        System.out.print("Choose route type:\n1. Bus\n2. Tram\n3. Trolleybus");
         int type = readInt(ns);
 
-        System.out.println("Enter route name:");
+        System.out.print("Enter route name:");
         String name = ns.nextLine();
         if (name.equals("")) throw new ScannerException("String can not be empty!");
 
-        System.out.println("Enter vehicles count:");
+        System.out.print("Enter vehicles count:");
         int vehicles = readInt(ns);
         if (vehicles < 0) throw new ScannerException("Value cannot be less than zero");
 
-        System.out.println("Enter route start hour:");
+        System.out.print("Enter route start hour:");
         int timeFrom = readInt(ns);
         if (timeFrom < 0) throw new ScannerException("Value cannot be less than zero");
 
-        System.out.println("Enter route end hour:");
+        System.out.print("Enter route end hour:");
         int timeTo = readInt(ns);
         if (timeTo < 0) throw new ScannerException("Value cannot be less than zero");
 
@@ -99,11 +100,11 @@ public class Main {
     }
 
     private static void showNextTransport(Scanner ns) throws ScannerException {
-        System.out.println("Enter time now (hours):");
+        System.out.print("Enter time now (hours):");
         int h = readInt(ns);
         if (h < 0) throw new ScannerException("Value cannot be less than zero");
 
-        System.out.println("Enter time now (minutes):");
+        System.out.print("Enter time now (minutes):");
         int m = readInt(ns);
         if (m < 0) throw new ScannerException("Value cannot be less than zero");
 
@@ -111,7 +112,7 @@ public class Main {
         for (Route route : Schedule.getRouteList()) {
             if (route.nextVehicle(h, m) < mint) mint = route.nextVehicle(h, m);
         }
-        System.out.printf("Next vehicle will on %d:%d\n", mint / 60, mint % 60);
+        System.out.print("Next vehicle will on " + (mint / 60) + ":" + (mint % 60) + "0\n");
     }
 
     private static void breakVehicle(Scanner ts) throws ScannerException {
