@@ -141,11 +141,11 @@ public class Main {
 
     private static void showTransportInfo() {
         RouteBus bus = new RouteBus(1, "Bus Info", 0, 0, 0, 279, "orange", 28);
-        bus.showInfo();
+        bus.showInfoBus();
         RouteTram tram = new RouteTram(2, "Tram Info", 0, 0, 0, 550, "blue", 30);
-        tram.showInfo();
+        tram.showInfoTram();
         RouteTrolleybus trolleybus = new RouteTrolleybus(3, "Trolleybus info", 0, 0, 0, 550, "green", 26);
-        trolleybus.showInfo();
+        trolleybus.showInfoTrolleybus();
     }
 
     private static void clearRoutes() {

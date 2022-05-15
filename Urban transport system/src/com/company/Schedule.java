@@ -47,5 +47,4 @@ public class Schedule implements Serializable {
         objectOutputStream.close();
         System.out.println("Routes was added in file");
     }
-
 }

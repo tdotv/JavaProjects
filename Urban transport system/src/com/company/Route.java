@@ -8,15 +8,14 @@ public class Route implements Serializable{
     protected int type;
     protected String name;
     protected int vehicles;
-    protected int timeTo;
-    protected int timeFrom; // in hours
+    protected int timeTo, timeFrom; // in hours
 
-    public Route(int type, String name, int vehicles, int timeFrom, int timeTo) {
+    public Route(int type, String name, int vehicles, int timeTo, int timeFrom) {
         this.type = type;
         this.name = name;
         this.vehicles = vehicles;
-        this.timeFrom = timeFrom;
         this.timeTo = timeTo;
+        this.timeFrom = timeFrom;
     }
 
     public int getType() {

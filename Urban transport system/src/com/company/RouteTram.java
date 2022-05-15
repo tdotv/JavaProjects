@@ -12,7 +12,8 @@ public class RouteTram extends Route {
         this.seats = seats;
     }
 
-    public void showInfo() {
+    public void showInfoTram() {
+        System.out.println(name);
         System.out.println("Tram network voltage " + pantograph);
         System.out.println("Tram color " + color);
         System.out.println("Tram seats " + seats);

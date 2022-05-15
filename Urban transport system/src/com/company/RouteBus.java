@@ -12,10 +12,9 @@ public class RouteBus extends Route {
         this.seats = seats;
     }
 
-    public void showInfo() {
-        System.out.println("The tank capacity of the bus is on average " + gasTank);
-        System.out.println("Bus color " + color);
+    public void showInfoBus() {
+        System.out.println("Bus tank capacity " + gasTank);
+        System.out.println("Bus color " + gasTank);
         System.out.println("Bus max speed " + seats);
     }
-
 }

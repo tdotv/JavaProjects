@@ -12,9 +12,9 @@ public class RouteTrolleybus extends Route {
         this.seats = seats;
     }
 
-    public void showInfo() {
-        System.out.println("The tank capacity of the bus is on average " + battery);
-        System.out.println("Bus color " + color);
-        System.out.println("Bus max speed " + seats);
+    public void showInfoTrolleybus() {
+        System.out.println("Battery capacity " + battery);
+        System.out.println("Trolleybus color " + color);
+        System.out.println("Trolleybus seats " + seats);
     }
 }
