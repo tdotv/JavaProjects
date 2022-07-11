@@ -1,7 +1,6 @@
 package com.company;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Route implements Serializable{
 
@@ -36,18 +35,6 @@ public class Route implements Serializable{
 
     public int getTimeFrom() {
         return timeFrom;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Route route)) return false;
-        return type == route.type && name.equals(route.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(type, name, vehicles, timeFrom, timeTo);
     }
 
     public void breakVehicle() {
